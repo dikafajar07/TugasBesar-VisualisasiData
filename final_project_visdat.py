@@ -8,6 +8,7 @@ Kelas : IF - 42 - GAB06
 Kelompok :
 Farah Az Zahra (1301190312)
 Dika Fajar Ramadan (1301190260)
+Hanif Azil Siroot (1301194189)
 # Import data
 """
 
