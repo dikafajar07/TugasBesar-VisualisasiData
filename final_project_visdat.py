@@ -32,9 +32,9 @@ from bokeh.resources import INLINE
 from datetime import date
 
 # Download dataset
-!gdown --id 1iXEWLifc-ugBWM0HxILCT5xWBma0mcFi
+#!gdown --id 1iXEWLifc-ugBWM0HxILCT5xWBma0mcFi
 
-data = pd.read_csv("WHO-COVID-19-global-data.csv", parse_dates=['Date_reported'])
+data = pd.read_csv("data/WHO-COVID-19-global-data.csv", parse_dates=['Date_reported'])
 data
 
 pd.unique(data["Country"])
@@ -161,6 +161,9 @@ tooltips = [
            ]
 
 fig.add_tools(HoverTool(tooltips=tooltips))
+fig.legend.location = 'top_left'
+fig.legend.click_policy = 'hide'
+fig.legend.click_policy = 'mute'
 
 # perlihatkan slider
 date_range_slider.js_link("value", fig.x_range, "start", attr_selector=0)
