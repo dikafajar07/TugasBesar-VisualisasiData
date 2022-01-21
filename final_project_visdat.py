@@ -138,15 +138,13 @@ fig.circle(x='Date',
            nonselection_color='lightgray',
            nonselection_alpha=0.3, muted_alpha=0, **common_Indonesia_kwargs)
 
-tooltips = [
-            ('Country', '@Country'),
+fig.add_tools(HoverTool(tooltips=[('Date', '@Date{%F}'),  ('Country', '@Country'),
             ('New Cases','@New_cases'),
             ('Cumulative Cases', '@Cumulative_cases'),
             ('New Deaths', '@New_deaths'),
-            ('Cumulative Deaths','@Cumulative_deaths'),
-           ]
+            ('Cumulative Deaths','@Cumulative_deaths')],
+          formatters={'@Date': 'datetime'}))
 
-fig.add_tools(HoverTool(tooltips=tooltips))
 fig.legend.location = 'top_left'
 fig.legend.click_policy = 'hide'
 fig.legend.click_policy = 'mute'
