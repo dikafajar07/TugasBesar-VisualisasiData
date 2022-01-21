@@ -26,7 +26,7 @@ from datetime import date
 # Download dataset
 #!gdown --id 1iXEWLifc-ugBWM0HxILCT5xWBma0mcFi
 
-data = pd.read_csv("Data/WHO-COVID-19-global-data.csv", parse_dates=['Date_reported'])
+data = pd.read_csv("./data/WHO-COVID-19-global-data.csv", parse_dates=['Date_reported'])
 
 data = data[["Date_reported", 'Country', 'New_cases', 'Cumulative_cases','New_deaths','Cumulative_deaths']]
 data = data.rename(columns={'Date_reported': 'Date'})
